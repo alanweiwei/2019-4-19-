@@ -1,0 +1,16 @@
+关于我对 this 的一些理解：
+	全局中Window的this:
+		1、直接在全局中输出this
+		2、函数打印this, 并且直接调用
+		3、定时器中的普通函数this是全局
+		4、匿名函数自执行
+	事件中的this:
+		哪个触发的this就是谁，既 （ . ）点前面是谁，this就是谁
+		如： obj.fn()   此时函数执行return 的this 就是点前面的 obj
+	构造函数：
+		通过new构造函数 this-> 就是实例
+		如：let f = new foo  现在this就是当前实例f
+	箭头函数：
+		this就是定义箭头函数的域
+		箭头函数中不能new 一new就会报错
+		箭头函数中也没有argments
